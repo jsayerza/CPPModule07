@@ -5,6 +5,7 @@
 *.pdf
 *.json
 start
+iter
 
 # Prerequisites
 *.d
