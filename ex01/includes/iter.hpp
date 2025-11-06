@@ -34,5 +34,4 @@ void printX(T& x)
 	std::cout << "[" << x << "]";
 }
 
-
 #endif

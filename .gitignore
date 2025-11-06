@@ -6,6 +6,7 @@
 *.json
 start
 iter
+array
 
 # Prerequisites
 *.d
