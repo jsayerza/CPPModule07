@@ -25,7 +25,7 @@ void iter(T& array, const size_t length, F& function)
 template <typename T>
 void incOne(T& x)
 {
-	x +=1;
+	x++;
 }
 
 template <typename T>

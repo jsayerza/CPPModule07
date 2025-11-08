@@ -13,6 +13,9 @@
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
+# include <cstdlib>
+# include <ostream>
+
 template <typename T>
 class Array
 {
@@ -30,6 +33,7 @@ class Array
 		const T& operator[](unsigned int index) const;
 
 		unsigned int size() const;
+		void printArray(const Array<T>& arrayX);
 
 		class OutOfBoundsException : public std::exception 
 		{
@@ -40,6 +44,9 @@ class Array
 				}
 		};
 };
+
+template <typename T>
+std::ostream& operator<<(std::ostream& oStream, const Array<T>& arrayX);
 
 # include "../includes/Array.tpp"
 

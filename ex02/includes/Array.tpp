@@ -84,5 +84,27 @@ unsigned int Array<T>::size() const
 	return (_len);
 }
 
+template <typename T>
+void printArray(const Array<T>& arrayX)
+{
+	std::cout << "   --- array size: " << arrayX.size() << std::endl;
+	std::cout << "   --- array: ";
+	for (unsigned int i = 0; i < arrayX.size(); i++)
+	{
+		std::cout << "[" << arrayX[i] << "]";
+	}
+}
+
+template <typename T>
+std::ostream& operator<<(std::ostream& oStream, const Array<T>& arrayX )
+{
+	oStream << "\n   --- arrayX size: " << arrayX.size() << std::endl;
+	oStream << "   --- arrayX: ";
+	for (unsigned int i = 0; i < arrayX.size(); i++)
+	{
+		oStream << "[" << arrayX[i] << "]";
+	}
+	return (oStream);
+}
 
 #endif
