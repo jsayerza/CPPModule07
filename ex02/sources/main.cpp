@@ -26,20 +26,20 @@ int	main(void)
 
 
 	{
-		std::cout << "--- Test crear array size 0 (arrayBuit)" << std::endl;
+		std::cout << "--- Test create array size 0 (arrayBuit)" << std::endl;
 		Array<int> arrayBuit;
 		std::cout << "   --- array size: " << arrayBuit.size() << std::endl;
 		// std::cout << std::endl;
 	}	
 
 	{
-		std::cout << "\n--- Test crear int array n size (arrayNSize)" << std::endl;
+		std::cout << "\n--- Test create int array n size (arrayNSize)" << std::endl;
 		Array<int> arrayNSize(5);
 		std::cout << "   --- array size: " << arrayNSize.size() << std::endl;
 		std::cout << std::endl;
 
 
-		std::cout << "--- Test inicializar arrayNSize" << std::endl;
+		std::cout << "--- Test initialize arrayNSize" << std::endl;
 		for (int i = 0; i < (int)arrayNSize.size(); i++)
 		{
 			arrayNSize[i] = i;
@@ -48,31 +48,31 @@ int	main(void)
 		std::cout << std::endl;
 
 		
-		std::cout << "\n--- Test copiar array arrayNSize a copyArrayNSize" << std::endl;
+		std::cout << "\n--- Test copy array arrayNSize to copyArrayNSize" << std::endl;
 		Array<int> copyArrayNSize(arrayNSize);
 		std::cout << copyArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test duplicar (=) array arrayNSize a duplArrayNSize" << std::endl;
+		std::cout << "\n--- Test duplicate (=) array arrayNSize to duplArrayNSize" << std::endl;
 		Array<int> duplArrayNSize = arrayNSize;
 		std::cout << duplArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test modificar array arrayNSize, copyArrayNSize i duplArrayNSize no canvien" << std::endl;
+		std::cout << "\n--- Test modify array arrayNSize, copyArrayNSize & duplArrayNSize don't change" << std::endl;
 		arrayNSize[0] = 42;
 		std::cout << arrayNSize;
 		std::cout << copyArrayNSize;
 		std::cout << duplArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test modificar array copyArrayNSize, arrayNSize i duplArrayNSize no canvien" << std::endl;
+		std::cout << "\n--- Test modify array copyArrayNSize, arrayNSize & duplArrayNSize don't change" << std::endl;
 		copyArrayNSize[0] = 666;
 		std::cout << arrayNSize;
 		std::cout << copyArrayNSize;
 		std::cout << duplArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test accedir a 'out of bounds' de l'array" << std::endl;
+		std::cout << "\n--- Test access to array's 'out of bounds'" << std::endl;
 		try
 		{
 			std::cout << "   --- array: ";
@@ -80,20 +80,20 @@ int	main(void)
 		}
 		catch (std::exception& e)
 		{
-			std::cout << "\nExcepció recollida: " << e.what() << std::endl;
+			std::cout << "\nCatched exception: " << e.what() << std::endl;
 			std::cout << std::endl;
 		}
 		
 	}	
 
 	{
-		std::cout << "\n--- Test crear char array n size (arrayNSize)" << std::endl;
+		std::cout << "\n--- Test create char array n size (arrayNSize)" << std::endl;
 		Array<char> arrayNSize(5);
 		std::cout << "   --- array size: " << arrayNSize.size() << std::endl;
 		std::cout << std::endl;
 
 
-		std::cout << "--- Test inicializar arrayNSize" << std::endl;
+		std::cout << "--- Test initialize arrayNSize" << std::endl;
 		for (int i = 0; i < (int)arrayNSize.size(); i++)
 		{
 			arrayNSize[i] = i + 'a';
@@ -102,31 +102,31 @@ int	main(void)
 		std::cout << std::endl;
 
 		
-		std::cout << "\n--- Test copiar array arrayNSize a copyArrayNSize" << std::endl;
+		std::cout << "\n--- Test copy array arrayNSize a copyArrayNSize" << std::endl;
 		Array<char> copyArrayNSize(arrayNSize);
 		std::cout << copyArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test duplicar (=) array arrayNSize a duplArrayNSize" << std::endl;
+		std::cout << "\n--- Test duplicate (=) array arrayNSize a duplArrayNSize" << std::endl;
 		Array<char> duplArrayNSize = arrayNSize;
 		std::cout << duplArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test modificar array arrayNSize, copyArrayNSize i duplArrayNSize no canvien" << std::endl;
+		std::cout << "\n--- Test modify array arrayNSize, copyArrayNSize i duplArrayNSize don't change" << std::endl;
 		arrayNSize[0] = 'z';
 		std::cout << arrayNSize;
 		std::cout << copyArrayNSize;
 		std::cout << duplArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test modificar array copyArrayNSize, arrayNSize i duplArrayNSize no canvien" << std::endl;
+		std::cout << "\n--- Test modify array copyArrayNSize, arrayNSize i duplArrayNSize don't change" << std::endl;
 		copyArrayNSize[0] = 'x';
 		std::cout << arrayNSize;
 		std::cout << copyArrayNSize;
 		std::cout << duplArrayNSize;
 		std::cout << std::endl;
 
-		std::cout << "\n--- Test accedir a 'out of bounds' de l'array" << std::endl;
+		std::cout << "\n--- Test access to array's 'out of bounds'" << std::endl;
 		try
 		{
 			std::cout << "   --- array: ";
@@ -134,7 +134,7 @@ int	main(void)
 		}
 		catch (std::exception& e)
 		{
-			std::cout << "\nExcepció recollida: " << e.what() << std::endl;
+			std::cout << "\nCatched exception: " << e.what() << std::endl;
 			std::cout << std::endl;
 		}
 		
@@ -142,6 +142,3 @@ int	main(void)
 
 	return (0);
 }
-
-
-//// Notes:
