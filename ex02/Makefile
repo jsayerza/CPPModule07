@@ -33,12 +33,12 @@ $(OBJ_PATH):
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp $(HEADERS) Makefile
 	$(CXX) $(CXXFLAGS) -c $< -o $@ $(INC)
-	@echo "$(GREEN)✓ Compilat: $<$(RESET)"
+	@echo "$(GREEN)✓ Compiled: $<$(RESET)"
 
 # Regla per a build program
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN)✓ $(NAME) compilat correctament$(RESET)"
+	@echo "$(GREEN)✓ $(NAME) successfully compiled$(RESET)"
 
 # Regla per a debug
 debug: CXXFLAGS += $(DEBUG_FLAGS)
@@ -46,11 +46,11 @@ debug: re
 
 clean:
 	rm -f $(OBJ_PATH)*.o
-	@echo "$(RED)✗ Objectes esborrats$(RESET)"
+	@echo "$(RED)✗ Objects deleted$(RESET)"
 
 fclean: clean
 	rm -f $(NAME)
-	@echo "$(RED)✗ $(NAME) esborrat$(RESET)"
+	@echo "$(RED)✗ $(NAME) deleted$(RESET)"
 
 re: fclean all
 

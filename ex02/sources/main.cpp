@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../includes/array.hpp"
+#include "../includes/Array.hpp"
 
 int	main(void)
 {
 	{	
-		std::cout << "--- Test crear array a int()" << std::endl;
+		std::cout << "--- Test create array of int()" << std::endl;
 		int * a = new int();
 		std::cout << "   --- array a: " << *a << std::endl;
 		delete a;
@@ -24,18 +24,18 @@ int	main(void)
 	}	
 
 	{
-		std::cout << "--- Test crear array buit" << std::endl;
+		std::cout << "--- Test create empty array" << std::endl;
 		Array<int> arrayBuit;
 		std::cout << "   --- array size: " << arrayBuit.size() << std::endl;
 		std::cout << std::endl;
 	}	
 
-	std::cout << "\n--- Test crear array n size" << std::endl;
+	std::cout << "\n--- Test create n size array" << std::endl;
 	Array<int> arrayNSize(5);
 	std::cout << "   --- array size: " << arrayNSize.size() << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "--- Test inicializar array n size" << std::endl;
+	std::cout << "--- Test inicialize n size array" << std::endl;
 	for (int i = 0; i < (int)arrayNSize.size(); i++)
 	{
 		arrayNSize[i] = i;
@@ -48,7 +48,22 @@ int	main(void)
 	}
 	std::cout << std::endl << std::endl;
 
-	std::cout << "\n--- Test accedir outofbounds array" << std::endl;
+	std::cout << "\n--- Test copy array" << std::endl;
+	Array<int> arrayCopia(arrayNSize);
+	std::cout << "   --- array size: " << arrayCopia.size() << std::endl;
+	std::cout << "   --- array: ";
+	for (int i = 0; i < (int)arrayCopia.size(); i++)
+	{
+		std::cout << "[" << arrayCopia[i] << "]";
+	}
+	std::cout << std::endl << std::endl;
+
+	std::cout << "\n--- Test modify arrayCopia value" << std::endl;
+	arrayCopia[0] = 666;
+	std::cout << "arrayCopia[0]: [" << arrayCopia[0] << "]";
+	std::cout << "arrayCopia[0]: [" << arrayCopia[0] << "]";
+
+	std::cout << "\n--- Test access to array's outofbounds" << std::endl;
 	try
 	{
 		std::cout << "   --- array: ";
@@ -56,7 +71,7 @@ int	main(void)
 	}
 	catch (std::exception& e)
 	{
-		std::cout << "\nExcepció recollida: " << e.what() << std::endl;
+		std::cout << "\nCatched exception: " << e.what() << std::endl;
 	}
 	
 	return (0);

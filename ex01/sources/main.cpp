@@ -29,20 +29,20 @@ void	test_int()
 	int array[] = {1, 2, 3, 4, 5};
 	size_t lenArray = 5;
 	
-	std::cout << "   --- Array inicial" << std::endl;
+	std::cout << "   --- Initial array" << std::endl;
 	iter(array, lenArray, printInt);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat: x2" << std::endl;
+	std::cout << "   --- Processed array: x2" << std::endl;
 	iter(array, lenArray, duplicaInt);
 	iter(array, lenArray, printInt);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat incOne func per template amb print func per tipus" << std::endl;
+	std::cout << "   --- Processed array incOne func by template using print func by type" << std::endl;
 	iter(array, lenArray, incOne<int>);
 	iter(array, lenArray, printInt);
 	std::cout << std::endl;
-	std::cout << "   --- Array processat incOne func per template amb print func per template" << std::endl;
+	std::cout << "   --- Processed array incOne func by template using print func by template" << std::endl;
 	iter(array, lenArray, printX<int>);
 	std::cout << std::endl;
 }
@@ -64,11 +64,11 @@ void	test_float()
 	float array[] = {1.1f, 2.2f, 3.3f, 4.4f, 5.5f};
 	size_t lenArray = 5;
 	
-	std::cout << "   --- Array inicial" << std::endl;
+	std::cout << "   --- Initial array" << std::endl;
 	iter(array, lenArray, printFloat);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat: x2" << std::endl;
+	std::cout << "   --- Processed array: x2" << std::endl;
 	iter(array, lenArray, duplicaFloat);
 	iter(array, lenArray, printFloat);
 	std::cout << std::endl;
@@ -92,20 +92,20 @@ void	test_char()
 	char array[] = {'s', 'a', 'y', 'e', 'r'};
 	size_t lenArray = 5;
 	
-	std::cout << "   --- Array inicial" << std::endl;
+	std::cout << "   --- Initial array" << std::endl;
 	iter(array, lenArray, printChar);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat: toUpper" << std::endl;
+	std::cout << "   --- Processed array: toUpper" << std::endl;
 	iter(array, lenArray, toUpper);
 	iter(array, lenArray, printChar);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat incOne func per template amb print func per tipus" << std::endl;
+	std::cout << "   --- Processed array incOne func by template using print func by type" << std::endl;
 	iter(array, lenArray, incOne<char>);
 	iter(array, lenArray, printChar);
 	std::cout << std::endl;
-	std::cout << "   --- Array processat incOne func per template amb print func per template" << std::endl;
+	std::cout << "   --- Processed array incOne func by template using print func by template" << std::endl;
 	iter(array, lenArray, printX<char>);
 	std::cout << std::endl;	
 }
@@ -124,14 +124,14 @@ void toUpperStr(std::string& str)
 void	test_str()
 {
 	std::cout << "--- Test str ---" << std::endl;
-	std::string array[] = {"Això", "es", "una", "bonica", "prova"};
+	std::string array[] = {"This", "is", "a", "pretty", "test"};
 	size_t lenArray = 5;
 	
-	std::cout << "   --- Array inicial" << std::endl;
+	std::cout << "   --- Initial array" << std::endl;
 	iter(array, lenArray, printX<std::string>);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat: toUpperStr" << std::endl;
+	std::cout << "   --- Processed array: toUpperStr" << std::endl;
 	iter(array, lenArray, toUpperStr);
 	iter(array, lenArray, printX<std::string>);
 	std::cout << std::endl;
@@ -143,11 +143,11 @@ void test_empty_array()
 	int array[] = {};
 	size_t lenArray = 0;
 
-	std::cout << "   --- Array inicial" << std::endl;
+	std::cout << "   --- Initial array" << std::endl;
 	iter(array, lenArray, printX<int>);
 	std::cout << std::endl;
 
-	std::cout << "   --- Array processat: x2" << std::endl;
+	std::cout << "   --- Processed array: x2" << std::endl;
 	iter(array, lenArray, incOne<int>);
 	iter(array, lenArray, printX<int>);
 	std::cout << std::endl;
