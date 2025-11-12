@@ -7,6 +7,7 @@
 start
 iter
 array
+main_42.cpp
 
 # Prerequisites
 *.d
